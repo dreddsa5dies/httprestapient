@@ -34,15 +34,17 @@
     git clone 
     cd init
     docker build -t matrix .
-    # connect to localhost:5555
-    docker run -d --name matrix -p 5555:5432 matrix
+    # connect to localhost:5432
+    docker run -d --name matrix -p 5432:5432 matrix
     # проверка запуска образа
     docker ps
     # проверка базы
-    docker exec -it matrix psql -d matrixdb -U muser
+    docker exec -it matrix psql -d matrix_attack -U muser
   ```
 
 </details>
+
+## Check API
 
 ## Clear system
 <details>

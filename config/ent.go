@@ -24,7 +24,7 @@ func SetClient(newClient *ent.Client) {
 
 // NewEntClient - connect to postgresql
 func NewEntClient() (*ent.Client, error) {
-	client, err := ent.Open("postgres", "host=localhost port=5555 user=muser dbname=matrixdb password=12345678")
+	client, err := ent.Open("postgres", "host=localhost port=5432 user=muser dbname=matrix_attack password=12345678 sslmode=disable")
 	if err != nil {
 		log.Fatal(err)
 	}

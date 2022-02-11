@@ -10,7 +10,7 @@ import (
 
 // all route
 func registerMatrixAttackRouter(r *mux.Router) {
-	userRouter := r.PathPrefix("/matrix").Subrouter()
+	userRouter := r.PathPrefix("/api").Subrouter()
 	userRouter.HandleFunc("/", controller.MatrixAttacksGetAllController).Methods(http.MethodGet)
 	userRouter.HandleFunc("/{id}", controller.MatrixAttackGetByIDController).Methods(http.MethodGet)
 	userRouter.HandleFunc("/", controller.MatrixAttackCreateController).Methods(http.MethodPost)
