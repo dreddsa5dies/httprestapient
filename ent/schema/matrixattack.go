@@ -15,7 +15,7 @@ type MatrixAttack struct {
 // Fields of the MatrixAttack.
 func (MatrixAttack) Fields() []ent.Field {
 	return []ent.Field{
-		field.String("Id").Unique().Default("unknown"),
+		field.String("IdMatrix").Unique(),
 		field.String("VendorName").Default("unknown"),
 		field.String("NameMatrix").Default("unknown"),
 		field.String("VersionMatrix").Default("unknown"),
