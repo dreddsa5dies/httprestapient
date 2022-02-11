@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"httprestapient/ent"
+	"github.com/dreddsa5dies/httprestapient/ent"
 
 	_ "github.com/lib/pq"
 )
