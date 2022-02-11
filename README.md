@@ -23,35 +23,39 @@
   - Изменить матрицу
   - Удалить матрицу
 
-Использовать стандарт HTTP REST JSON API.
-
-Результат оформить как репозиторий Github. Выслать ссылку на репозиторий.
-
-В README к репозиторию описать как можно запустить проект, привести пример JSON для вставки пробных записей. Возможно, написать скрипт либо отдельную программу которая заполняет матрицу небольшим количеством пробных данных.
+Использовать стандар`зможно, написать скрипт либо отдельную программу которая заполняет матрицу небольшим количеством пробных данных.
 </details>
 
 ## Init
-Init DB
-```bash
-  git clone 
-  cd init
-  docker build -t matrix .
-  # connect to localhost:5555
-  docker run -d --name matrix -p 5555:5432 matrix
-  # проверка запуска образа
-  docker ps
-  # проверка базы
-  docker exec -it matrix psql -d matrixdb -U muser
+<details>
+  <summary>Init DB</summary>
+
+  ```bash
+    git clone 
+    cd init
+    docker build -t matrix .
+    # connect to localhost:5555
+    docker run -d --name matrix -p 5555:5432 matrix
+    # проверка запуска образа
+    docker ps
+    # проверка базы
+    docker exec -it matrix psql -d matrixdb -U muser
   ```
 
+</details>
+
 ## Clear system
-After check DB & app - delete docker image
-```bash
-docker stop matrix
-docker rm matrix
-docker rm $(docker ps -aq)
-docker rmi matrix
-```
+<details>
+  <summary>After check DB & app - delete docker image</summary>
+
+  ```bash
+    docker stop matrix
+    docker rm matrix
+    docker rm $(docker ps -aq)
+    docker rmi matrix
+  ```
+
+</details>
 
 ## License
 This project is licensed under GPL license. Please read the [LICENSE](https:/github.com/dreddsa5dies/httprestapient/tree/master/LICENSE.md) file.
