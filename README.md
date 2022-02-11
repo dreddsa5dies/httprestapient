@@ -31,20 +31,18 @@
 </details>
 
 ## Init
-Need install Docker
-
-Test DB
+Init DB
 ```bash
-git clone 
-cd init
-docker build -t matrix .
-# connect to localhost:5555
-docker run -d --name matrix -p 5555:5432 matrix
-# проверка запуска образа
-docker ps
-# проверка базы
-docker exec -it matrix psql -d matrixdb -U muser
-```
+  git clone 
+  cd init
+  docker build -t matrix .
+  # connect to localhost:5555
+  docker run -d --name matrix -p 5555:5432 matrix
+  # проверка запуска образа
+  docker ps
+  # проверка базы
+  docker exec -it matrix psql -d matrixdb -U muser
+  ```
 
 ## Clear system
 After check DB & app - delete docker image
