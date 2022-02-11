@@ -7,6 +7,7 @@ import (
 	"time"
 
 	"github.com/dreddsa5dies/httprestapient/config"
+	"github.com/dreddsa5dies/httprestapient/middleware"
 
 	"github.com/dreddsa5dies/httprestapient/router"
 
@@ -40,6 +41,7 @@ func main() {
 
 	//initiate router and register all the route
 	r := mux.NewRouter()
+	r.Use(middleware.Header)
 	router.RegisterRouter(r)
 
 	srv := &http.Server{
