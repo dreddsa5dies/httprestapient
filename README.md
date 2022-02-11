@@ -52,6 +52,7 @@ After check DB & app - delete docker image
 docker stop matrix
 docker rm matrix
 docker rm $(docker ps -aq)
+docker rmi matrix
 ```
 
 ## License
