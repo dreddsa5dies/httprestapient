@@ -7,7 +7,7 @@ import (
 	"entgo.io/ent/schema/field"
 )
 
-// User holds the schema definition for the MatrixAttack entity.
+// MatrixAttack holds the schema definition for the MatrixAttack entity.
 type MatrixAttack struct {
 	ent.Schema
 }
@@ -22,4 +22,9 @@ func (MatrixAttack) Fields() []ent.Field {
 		field.Time("CreateDate").Default(time.Now),
 		field.Time("ModifyDate").Default(time.Now),
 	}
+}
+
+// Edges of the MatrixAttack.
+func (MatrixAttack) Edges() []ent.Edge {
+	return nil
 }
