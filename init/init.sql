@@ -1,3 +1,3 @@
-CREATE TABLE matrix_attacks (id INT UNIQUE PRIMARY KEY, id_matrix TEXT, vendor_name TEXT, name_matrix TEXT, version_matrix TEXT, create_date DATE, modify_date DATE);
+CREATE TABLE matrix_attacks (id serial PRIMARY KEY, id_matrix TEXT, vendor_name TEXT, name_matrix TEXT, version_matrix TEXT, create_date DATE, modify_date DATE);
 INSERT INTO matrix_attacks VALUES (1, 'G0138', 'Andariel', 'Silent Chollima', '1.0', '29 September 2021', '15 October 2021');
 INSERT INTO matrix_attacks VALUES (2, 'T1595.001', 'PRE', 'Active Scanning: Scanning IP Blocks', '2.0', '02 October 2020', '15 April 2021');
