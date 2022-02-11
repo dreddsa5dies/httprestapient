@@ -10,6 +10,7 @@ require (
 	github.com/go-openapi/inflect v0.19.0 // indirect
 	github.com/google/go-cmp v0.5.7 // indirect
 	github.com/google/uuid v1.3.0 // indirect
+	github.com/gorilla/mux v1.8.0 // indirect
 	github.com/hashicorp/hcl/v2 v2.11.1 // indirect
 	github.com/inconshreveable/mousetrap v1.0.0 // indirect
 	github.com/lib/pq v1.10.4 // indirect
