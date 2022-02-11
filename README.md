@@ -36,16 +36,22 @@ Need install Docker
 Test DB
 ```bash
 git clone 
+cd init
 docker build -t matrix .
+# connect to localhost:5555
 docker run -d --name matrix -p 5555:5432 matrix
+# проверка запуска образа
 docker ps
+# проверка базы
 docker exec -it matrix psql -d matrixdb -U muser
 ```
 
-After check DB - delete docker image
+## Clear system
+After check DB & app - delete docker image
 ```bash
 docker stop matrix
 docker rm matrix
+docker rm $(docker ps -aq)
 ```
 
 ## License
